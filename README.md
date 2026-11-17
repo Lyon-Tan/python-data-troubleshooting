@@ -2,6 +2,22 @@
 
 This simulated enterprise transaction troubleshooting lab explores a support scenario: a transaction export has unexpected totals or statuses. It flags suspect records and produces evidence for investigation without changing the source file. All records are synthetic. This is a beginner-to-intermediate learning project, not a production system or a claim of professional support experience.
 
+## Language Notes
+
+This repository uses English as the primary technical language.
+
+Short Traditional Chinese and conversational Malaysian Malay notes are included to support learning and interview revision.
+
+Technical terms are intentionally kept in English where commonly used in the industry.
+
+Traditional Chinese:
+繁中備註主要用來快速理解和複習技術概念，部分常用技術詞會保留英文。
+
+Bahasa Melayu:
+Nota BM guna gaya yang biasa ditutur di Malaysia supaya lebih senang faham dan explain masa interview. Istilah technical yang biasa digunakan akan kekal dalam English.
+
+See [Python Learning Notes](LEARNING_NOTES.md) for concise explanations of collections, validation, exception handling, and troubleshooting.
+
 ## Run
 
 Use Python 3.10 or newer. No third-party dependencies are required. From this project folder:
@@ -51,6 +67,36 @@ A duplicate ID is a symptom. Retried requests, export duplication, or integratio
 - For larger exports, stream reports to disk and use a database unique index, external sort, or partitioned processing for duplicate detection. Keep reconciliation rules explicit.
 - Similar validation could help investigate approved SAP/ERP exports, checking IDs, statuses, relationships, and totals. This exercise does not connect to SAP and does not claim SAP experience.
 - Skills demonstrated: functions, exceptions, reusable validation, CSV/JSON handling, command-line arguments, and evidence-based diagnosis.
+
+> 🇹🇼 繁中備註：set 的 membership check 平均是 O(1)，但保存 ID 和報表仍會使用記憶體。面試時要分清楚執行時間、記憶體用量和真正已驗證的能力。
+>
+> 🇲🇾 BM: Membership check dalam set purata O(1), tapi simpan ID dan report masih guna memory. Masa interview, bezakan masa proses, penggunaan memory dan apa yang lab ni betul-betul tunjuk.
+
+## Quick Interview Revision
+
+### Why use a set?
+
+English: Check whether an ID has already appeared before adding it; average membership lookup is O(1).
+
+> 🇹🇼 繁中備註：先用 set 查 ID 是否出現過，再加入；平均查找時間是 O(1)。
+>
+> 🇲🇾 BM: Check ID tu dah ada dalam set atau belum, baru tambah. Lookup purata O(1).
+
+### What is an invalid record?
+
+English: A row that violates one or more validation rules; record all issues without silently changing the input.
+
+> 🇹🇼 繁中備註：一筆資料可能違反多個規則；要完整回報，不要默默改掉來源資料。
+>
+> 🇲🇾 BM: Satu row boleh langgar beberapa rule. Report semua isu, jangan ubah data asal senyap-senyap.
+
+### How do you establish root cause?
+
+English: Reproduce and isolate the issue, then validate the suspected cause with logs and source records before fixing it.
+
+> 🇹🇼 繁中備註：先重現並縮小問題範圍，再用 log 和來源資料確認原因，不能只看現象就下結論。
+>
+> 🇲🇾 BM: Reproduce dan kecilkan skop dulu, kemudian semak log dan rekod asal untuk sahkan punca sebelum fix.
 
 ## Interview questions
 
