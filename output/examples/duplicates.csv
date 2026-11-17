@@ -1,0 +1,2 @@
+row_number,transaction_id,customer_id,amount,status,timestamp
+4,TX001,C001,120.50,COMPLETED,2026-11-16T09:10:00

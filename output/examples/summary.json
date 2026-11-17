@@ -1,0 +1,21 @@
+{
+  "total_records": 15,
+  "valid_records": 3,
+  "invalid_records": 12,
+  "duplicate_occurrences": 1,
+  "duplicate_transaction_ids": [
+    "TX001"
+  ],
+  "issue_counts": {
+    "duplicate_transaction_id": 1,
+    "invalid_status": 2,
+    "invalid_timestamp": 1,
+    "malformed_amount": 1,
+    "missing_amount": 1,
+    "missing_customer_id": 1,
+    "missing_timestamp": 1,
+    "missing_transaction_id": 1,
+    "negative_amount": 1,
+    "non_finite_amount": 2
+  }
+}

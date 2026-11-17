@@ -1,0 +1,13 @@
+row_number,transaction_id,customer_id,amount,status,timestamp,issues,raw_record
+4,TX001,C001,120.50,COMPLETED,2026-11-16T09:10:00,duplicate_transaction_id,"{""transaction_id"": ""TX001"", ""customer_id"": ""C001"", ""amount"": ""120.50"", ""status"": ""COMPLETED"", ""timestamp"": ""2026-11-16T09:10:00""}"
+5,TX003,,55.00,FAILED,2026-11-16T09:15:00,missing_customer_id,"{""transaction_id"": ""TX003"", ""customer_id"": """", ""amount"": ""55.00"", ""status"": ""FAILED"", ""timestamp"": ""2026-11-16T09:15:00""}"
+6,TX004,C003,-25.00,COMPLETED,2026-11-16T09:20:00,negative_amount,"{""transaction_id"": ""TX004"", ""customer_id"": ""C003"", ""amount"": ""-25.00"", ""status"": ""COMPLETED"", ""timestamp"": ""2026-11-16T09:20:00""}"
+7,TX005,C004,abc,PENDING,2026-11-16T09:25:00,malformed_amount,"{""transaction_id"": ""TX005"", ""customer_id"": ""C004"", ""amount"": ""abc"", ""status"": ""PENDING"", ""timestamp"": ""2026-11-16T09:25:00""}"
+8,TX006,C005,45.00,UNKNOWN,2026-11-16T09:30:00,invalid_status,"{""transaction_id"": ""TX006"", ""customer_id"": ""C005"", ""amount"": ""45.00"", ""status"": ""UNKNOWN"", ""timestamp"": ""2026-11-16T09:30:00""}"
+9,TX007,C006,,COMPLETED,2026-11-16T09:35:00,missing_amount,"{""transaction_id"": ""TX007"", ""customer_id"": ""C006"", ""amount"": """", ""status"": ""COMPLETED"", ""timestamp"": ""2026-11-16T09:35:00""}"
+10,,C007,10.00,PENDING,2026-11-16T09:40:00,missing_transaction_id,"{""transaction_id"": """", ""customer_id"": ""C007"", ""amount"": ""10.00"", ""status"": ""PENDING"", ""timestamp"": ""2026-11-16T09:40:00""}"
+11,TX008,C008,NaN,COMPLETED,2026-11-16T09:45:00,non_finite_amount,"{""transaction_id"": ""TX008"", ""customer_id"": ""C008"", ""amount"": ""NaN"", ""status"": ""COMPLETED"", ""timestamp"": ""2026-11-16T09:45:00""}"
+13,TX010,C010,30.00,COMPLETED,not-a-timestamp,invalid_timestamp,"{""transaction_id"": ""TX010"", ""customer_id"": ""C010"", ""amount"": ""30.00"", ""status"": ""COMPLETED"", ""timestamp"": ""not-a-timestamp""}"
+14,TX011,C011,15.00,,2026-11-16T10:00:00,invalid_status,"{""transaction_id"": ""TX011"", ""customer_id"": ""C011"", ""amount"": ""15.00"", ""status"": """", ""timestamp"": ""2026-11-16T10:00:00""}"
+15,TX012,C012,Infinity,PENDING,2026-11-16T10:05:00,non_finite_amount,"{""transaction_id"": ""TX012"", ""customer_id"": ""C012"", ""amount"": ""Infinity"", ""status"": ""PENDING"", ""timestamp"": ""2026-11-16T10:05:00""}"
+16,TX013,C013,19.99,COMPLETED,,missing_timestamp,"{""transaction_id"": ""TX013"", ""customer_id"": ""C013"", ""amount"": ""19.99"", ""status"": ""COMPLETED"", ""timestamp"": """"}"

@@ -1,0 +1,38 @@
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local configuration and sensitive files
+.env
+.env.*
+.aws/
+.ssh/
+*.pem
+*.key
+credentials.*
+secrets.*
+
+# Editor, operating system, and temporary development files
+.vscode/
+.idea/
+.codex/
+.agents/
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.bak
+*.swp
+*~
+
+# Keep only the reviewed synthetic example reports
+output/*
+!output/.gitkeep
+!output/examples/
+output/examples/*
+!output/examples/duplicates.csv
+!output/examples/invalid_records.csv
+!output/examples/summary.json
